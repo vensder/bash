@@ -1,0 +1,24 @@
+You need to surround PATTERN in double quotes:
+
+PATTERN="/opt/apps/bin/lighttpd.bin -f /opt/apps/etc/lighttpd/lighttpd.conf\$"
+pgrep -f "$PATTERN"
+
+See: quoting variables
+Edit: and for echoing i would just do:
+
+echo pgrep -f \'$PATTERN\'
+
+
+As I don't have lighttpd.bin available to test with, I am submitting an untested option, mostly agreeing with @barti_ddu, but with a slightly different twist
+
+PATTERN='/opt/apps/bin/lighttpd.bin -f /opt/apps/etc/lighttpd/lighttpd.conf\$'
+pgrep  -f "$PATTERN"
+echo pgrep  -f "$PATTERN"
+
+I would keep the single quotes on the assingment to PATTERN, but totally agree you need the dbl-quoting when using with pgrep or echo.
+
+
+====================================
+
+
+PATTERN='/opt/bin/security-manager -d --config=/etc/security_manager/main.cfg'

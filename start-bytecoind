@@ -1,0 +1,6 @@
+#!/bin/sh
+
+cd "${0%/*}"
+export LD_LIBRARY_PATH="$PWD"
+exec ./ld-linux-x86-64.so.2 ./bytecoind "$@"
+
