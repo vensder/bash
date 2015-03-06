@@ -4,7 +4,7 @@
 
 DATE=`date +%F`
 #2014-06-27
-WORKDIR="/opt/bcn_payout/bytecoin-reserve"
+WORKDIR="/path/to/workdir"
 
 # create dir if not exist
 mkdir -p $WORKDIR/logs;
