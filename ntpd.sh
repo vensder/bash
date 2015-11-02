@@ -1,4 +1,5 @@
 #!/bin/sh
+
 PATTERN='ntpd -u ntp:ntp -p /var/run/ntpd.pid -g'
 SERVICE="/sbin/service"
 PGREP="/usr/bin/pgrep"
