@@ -2,6 +2,7 @@
 
 # Shutdown jenkins slave when slave go to offline due idle
 # For AWS waiting for end of the billing hour (i.e. minutes of uptime)
+# Run this script every minutes via cron
 
 PATTERN='java -jar slave.jar'
 PGREP="/usr/bin/pgrep"
